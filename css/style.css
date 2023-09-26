@@ -21,6 +21,7 @@ body {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: 100%;
+  grid-template-areas: "header header" "aside slider";
   width: 100%;
   position: fixed;
   top: 0;
@@ -198,6 +199,7 @@ body {
 .sections {
   width: 64px;
   padding: 0 4px;
+  grid-area: aside;
 }
 .sections.expand {
   width: 216px;
