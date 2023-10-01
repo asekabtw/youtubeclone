@@ -127,6 +127,7 @@ const list = [
               </svg>`,
   },
 ];
+
 // aside nav
 const inpanded = [
   `<!-- Home -->
@@ -976,6 +977,9 @@ const expanded = [
         </div>`,
 ];
 
+// main
+const mainContainer = document.querySelector(".main-container");
+
 searchInput.addEventListener("focus", () => {
   searchLine.style.border = "1px solid #065fd4";
   searchLine.style.marginLeft = "0";
@@ -1017,9 +1021,11 @@ burger.addEventListener("click", () => {
   if (!sections.classList.contains("expand")) {
     sections.classList.add("expand");
     sections.innerHTML = expanded;
+    mainContainer.style.marginLeft = "240px";
   } else {
     sections.classList.remove("expand");
     sections.innerHTML = inpanded;
+    mainContainer.style.marginLeft = "72px";
   }
 });
 
@@ -1049,3 +1055,7 @@ function displaySections(listItems) {
   sections.innerHTML = displayMenu;
 }
 // end of aside nav
+
+// main
+
+// end of main

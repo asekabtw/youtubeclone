@@ -282,4 +282,11 @@ body {
 
 .slider {
   grid-area: slider;
+}
+
+.main {
+  min-height: 100vh;
+}
+.main-container {
+  margin: 56px 0 0 72px;
 }/*# sourceMappingURL=style.css.map */
