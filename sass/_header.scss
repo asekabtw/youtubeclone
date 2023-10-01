@@ -11,7 +11,7 @@
 .header {
   box-sizing: border-box;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: min-content 1fr;
   grid-template-areas:
     "header header"
     "aside slider";
@@ -25,6 +25,7 @@
   &-container {
     display: flex;
     justify-content: space-between;
+    grid-area: header;
     padding: 0 16px;
     height: 56px;
   }
@@ -331,4 +332,9 @@
     margin: 0;
     margin-right: 24px;
   }
+}
+
+// slider
+.slider {
+  grid-area: slider;
 }
