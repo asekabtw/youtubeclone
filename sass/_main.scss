@@ -5,3 +5,31 @@
     margin: 56px 0 0 72px;
   }
 }
+
+// video
+.video {
+  &-container {
+    margin-left: 16px;
+  }
+
+  &__thumbnail {
+    position: relative;
+    width: 322px;
+    height: 181px;
+    & img {
+      width: 322px;
+      height: 181px;
+      background-color: gray;
+    }
+  }
+
+  &__time {
+    position: absolute;
+    right: 4px;
+    bottom: 4px;
+    background-color: #000;
+    font-size: 14px;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+}
