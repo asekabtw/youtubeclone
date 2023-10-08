@@ -19,6 +19,8 @@
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #0f0f0f;
+  z-index: 2;
   // height: 56px;
   // flex-wrap: wrap;
 
@@ -228,7 +230,7 @@
 .sections {
   width: 64px;
   padding: 0 4px;
-  grid-area: aside;
+  position: fixed;
 
   &.expand {
     width: 216px;

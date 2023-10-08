@@ -26,6 +26,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #0f0f0f;
+  z-index: 2;
 }
 .header-container {
   display: flex;
@@ -200,7 +202,7 @@ body {
 .sections {
   width: 64px;
   padding: 0 4px;
-  grid-area: aside;
+  position: fixed;
 }
 .sections.expand {
   width: 216px;
