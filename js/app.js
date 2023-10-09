@@ -978,7 +978,7 @@ const expanded = [
 ];
 
 // main
-const mainContainer = document.querySelector(".main-container");
+const main = document.querySelector(".main");
 
 searchInput.addEventListener("focus", () => {
   searchLine.style.border = "1px solid #065fd4";
@@ -1021,11 +1021,11 @@ burger.addEventListener("click", () => {
   if (!sections.classList.contains("expand")) {
     sections.classList.add("expand");
     sections.innerHTML = expanded;
-    mainContainer.style.marginLeft = "240px";
+    main.style.marginLeft = "240px";
   } else {
     sections.classList.remove("expand");
     sections.innerHTML = inpanded;
-    mainContainer.style.marginLeft = "72px";
+    main.style.marginLeft = "72px";
   }
 });
 
