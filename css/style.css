@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
 * {
   margin: 0;
   padding: 0;
-  color: #fff;
+  color: #f1f1f1;
   font-family: "Roboto", Arial, sans-serif;
 }
 
@@ -295,15 +295,15 @@ body {
   margin-left: 16px;
 }
 .video__item {
-  width: 322px;
+  width: 33%;
 }
 .video__thumbnail {
   position: relative;
 }
 .video__thumbnail img {
-  width: 322px;
   height: 181px;
   background-color: gray;
+  display: block;
 }
 .video__time {
   position: absolute;
@@ -315,13 +315,40 @@ body {
   border-radius: 4px;
 }
 .video__desc {
+  margin-top: 12px;
   height: 76px;
   display: flex;
 }
 .video__title {
+  max-height: 44px;
+  line-height: 22px;
   font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@supports (-webkit-line-clamp: 2) {
+  .video__title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: initial;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+.video__channel {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px;
+}
+.video__views {
+  color: #aaa;
+  font-size: 14px;
 }
 .video__icon {
+  flex-shrink: 0;
+  margin-right: 12px;
   border-radius: 50%;
   overflow: hidden;
   width: 36px;
