@@ -97,9 +97,6 @@ init()
 
 
 
-
-
-
 function displaySections(listItems) {
   let displayMenu = listItems.map((item) => {
     // console.log(item);
