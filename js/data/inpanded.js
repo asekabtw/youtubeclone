@@ -2,7 +2,7 @@ const inpanded = [
   `<!-- Home -->
   <div class="sections-container">
     <div class="sections__icon">
-      <a class="sections__link" href="#">
+      <a class="sections__link" href="index.html">
         <svg
           enable-background="new 0 0 24 24"
           height="24"
@@ -29,7 +29,7 @@ const inpanded = [
   <!-- shorts -->
   <div class="sections-container">
     <div class="sections__icon">
-      <a class="sections__link" href="#">
+      <a class="sections__link" href="shorts.html">
         <svg
           height="24"
           viewBox="0 0 24 24"

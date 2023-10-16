@@ -1,0 +1,60 @@
+.main {
+  min-height: 100vh;
+  margin: 56px 0 0 72px; }
+
+.video-container {
+  margin-left: 16px; }
+.video__item {
+  width: 33%; }
+.video__thumbnail {
+  position: relative; }
+  .video__thumbnail img {
+    height: 181px;
+    background-color: gray;
+    display: block; }
+.video__time {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  background-color: #000;
+  font-size: 12px;
+  padding: 2px 4px;
+  border-radius: 4px; }
+.video__desc {
+  margin-top: 12px;
+  height: 76px;
+  display: flex; }
+.video__title {
+  max-height: 44px;
+  line-height: 22px;
+  font-size: 16px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis; }
+  @supports (-webkit-line-clamp: 2) {
+    .video__title {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: initial;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical; } }
+.video__channel {
+  color: #aaa;
+  text-decoration: none;
+  font-size: 14px; }
+.video__views {
+  color: #aaa;
+  font-size: 14px; }
+.video__icon {
+  flex-shrink: 0;
+  margin-right: 12px;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 36px;
+  height: 36px; }
+  .video__icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: bisque; }
