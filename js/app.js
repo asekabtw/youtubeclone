@@ -3,61 +3,69 @@ import inpanded from "./data/inpanded.js";
 import expanded from "./data/expanded.js";
 import headerContainerHTML from "./data/headerHTML.js";
 
-function init(){
-	addHeaderContent();
-	setupHeaderEventListeners();
-	burgerStart();
+function init() {
+  addHeaderContent();
+  setupHeaderEventListeners();
+  burgerStart();
 }
 
-function setupHeaderEventListeners(){
-	const searchInput = document.getElementById("search");
-	const searchBar = document.querySelector(".search__input");
-	const searchLine = document.querySelector(".search__line");
-	const searchIcon = document.querySelector(".search__search");
-	const clearBtn = document.querySelector(".clear");
+function setupHeaderEventListeners() {
+  const searchInput = document.getElementById("search");
+  const searchBar = document.querySelector(".search__input");
+  const searchLine = document.querySelector(".search__line");
+  const searchIcon = document.querySelector(".search__search");
+  const clearBtn = document.querySelector(".clear");
 
-	//Event Listeners
-	searchInput.addEventListener("focus", () => handleSearchFocus(searchLine, searchIcon));
-	searchInput.addEventListener("blur", () => handleSearchBlur(searchLine, searchIcon, clearBtn));
-	searchInput.addEventListener("input", () => handleSearchInput(searchInput, clearBtn));
-	clearBtn.addEventListener("click", (event) => handleClearButtonClick(event, searchInput, clearBtn));
+  //Event Listeners
+  searchInput.addEventListener("focus", () =>
+    handleSearchFocus(searchLine, searchIcon)
+  );
+  searchInput.addEventListener("blur", () =>
+    handleSearchBlur(searchLine, searchIcon, clearBtn)
+  );
+  searchInput.addEventListener("input", () =>
+    handleSearchInput(searchInput, clearBtn)
+  );
+  clearBtn.addEventListener("click", (event) =>
+    handleClearButtonClick(event, searchInput, clearBtn)
+  );
 }
 
-function handleSearchFocus(searchLine, searchIcon){
-	searchLine.style.border = "1px solid #065fd4";
-	searchLine.style.marginLeft = "0";
-	// searchLine.style.padding = "0";
-	searchIcon.style.display = "block";
-	searchLine.style.width = "calc(70% - 104px + 34px)";
-	// searchBar.style.width = "calc(100% - 45px - 40px)";
+function handleSearchFocus(searchLine, searchIcon) {
+  searchLine.style.border = "1px solid #065fd4";
+  searchLine.style.marginLeft = "0";
+  // searchLine.style.padding = "0";
+  searchIcon.style.display = "block";
+  searchLine.style.width = "calc(70% - 104px + 34px)";
+  // searchBar.style.width = "calc(100% - 45px - 40px)";
 }
 
 function handleSearchBlur(searchLine, searchIcon, clearBtn) {
-	searchLine.style.border = "1px solid #303030";
-	searchLine.style.marginLeft = "34px";
-	searchIcon.style.display = "none";
-	searchLine.style.width = "calc(70% - 104px)";
-	clearBtn.style.opacity = "0";
+  searchLine.style.border = "1px solid #303030";
+  searchLine.style.marginLeft = "34px";
+  searchIcon.style.display = "none";
+  searchLine.style.width = "calc(70% - 104px)";
+  clearBtn.style.opacity = "0";
 }
 
 function handleSearchInput(searchInput, clearBtn) {
-	if (searchInput.value) {
-		clearBtn.style.opacity = "1";
-	} else {
-		clearBtn.style.opacity = "0";
-	}
+  if (searchInput.value) {
+    clearBtn.style.opacity = "1";
+  } else {
+    clearBtn.style.opacity = "0";
+  }
 }
 
 function handleClearButtonClick(event, searchInput, clearBtn) {
   event.preventDefault();
-	searchInput.value = "";
-	clearBtn.style.opacity = "0";
-	searchInput.focus();
+  searchInput.value = "";
+  clearBtn.style.opacity = "0";
+  searchInput.focus();
 }
 
-function addHeaderContent(){
-	const headerElement = document.getElementById('header')
-	headerElement.innerHTML = headerContainerHTML
+function addHeaderContent() {
+  const headerElement = document.getElementById("header");
+  headerElement.innerHTML = headerContainerHTML;
 }
 
 function burgerStart() {
@@ -71,31 +79,26 @@ function burgerStart() {
 }
 
 function isExpanded(sections) {
-	if (sections.classList.contains("expand")) {
-		sections.innerHTML = expanded;
-	} else {
-		sections.innerHTML = inpanded;
-	}
+  if (sections.classList.contains("expand")) {
+    sections.innerHTML = expanded;
+  } else {
+    sections.innerHTML = inpanded;
+  }
 }
 
 function toggleSections(sections, main) {
-	if (!sections.classList.contains("expand")) {
-		sections.classList.add("expand");
-		sections.innerHTML = expanded;
-		main.style.marginLeft = "240px";
-	} else {
-		sections.classList.remove("expand");
-		sections.innerHTML = inpanded;
-		main.style.marginLeft = "72px";
-	}
+  if (!sections.classList.contains("expand")) {
+    sections.classList.add("expand");
+    sections.innerHTML = expanded;
+    main.style.marginLeft = "240px";
+  } else {
+    sections.classList.remove("expand");
+    sections.innerHTML = inpanded;
+    main.style.marginLeft = "72px";
+  }
 }
 
-init()
-
-
-
-
-
+init();
 
 function displaySections(listItems) {
   let displayMenu = listItems.map((item) => {
